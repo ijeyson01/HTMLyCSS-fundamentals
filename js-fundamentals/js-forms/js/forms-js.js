@@ -29,7 +29,10 @@ function eventoForm(){
         mostrarAlerta();
     } else {
         if(usuarioEmail['password'] == password.value) {
-            window.location.href('../../js-list-table/page/list/table.html');
+            localStorage.setItem('usuario', usuarioEmail['usuario']);
+            localStorage.setItem('email', usuarioEmail['email']);
+            localStorage.setItem('tipousuario', usuarioEmail['tipousuario']);
+            window.location.href ='../../js-list-table/page/list-table.html';
         } else {
             mostrarAlerta();
         }
